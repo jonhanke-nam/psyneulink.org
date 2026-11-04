@@ -1,0 +1,144 @@
+/* Matches the look of the previous WordPress site (Type theme, PsyNeuLink colors). */
+:root {
+  --text: #222;
+  --heading: #000;
+  --accent: #af540b;
+  --menu-accent: #dd9933;
+  --menu-background: #eaeaea;
+  --line: rgba(0, 0, 0, .07);
+  --muted: #888;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 10px; top: 10px; padding: 8px 12px; background: #fff; z-index: 10; }
+
+/* Header */
+.logo { display: block; width: 250px; margin: auto; padding: 10px 0; line-height: 1; }
+.logo img { display: block; width: 100%; height: auto; }
+.site-header { text-align: center; }
+
+/* Desktop menu */
+.main-menu { display: none; }
+.main-menu ul { margin: 0; padding: 0; list-style: none; }
+.main-menu li { display: inline-block; position: relative; margin: 0; }
+.main-menu a {
+  display: inline-block;
+  padding: 0 10px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: uppercase;
+  transition: color .3s ease-in-out;
+}
+.main-menu a:hover, .main-menu a:focus, .main-menu .current a {
+  color: var(--menu-accent);
+  text-decoration: none;
+}
+.main-menu .current::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  margin-left: -25px;
+  background-color: var(--menu-accent);
+}
+
+/* Mobile menu */
+.mobile-menu { border-bottom: 1px solid var(--line); }
+.mobile-menu summary { display: block; position: relative; width: 40px; height: 40px; cursor: pointer; list-style: none; }
+.mobile-menu summary::-webkit-details-marker { display: none; }
+.menu-icon, .menu-icon::before, .menu-icon::after {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text);
+}
+.menu-icon { left: 10px; top: 20px; }
+.menu-icon::before { content: ""; left: 0; top: -6px; }
+.menu-icon::after { content: ""; left: 0; top: 6px; }
+.mobile-menu ul { margin: 0; padding: 0; list-style: none; }
+.mobile-menu a {
+  display: block;
+  margin: 0 15px;
+  padding: 12px 0;
+  border-top: 1px solid #f2f2f2;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.mobile-menu .current a, .mobile-menu a:hover { color: var(--accent); text-decoration: none; }
+
+/* Page content */
+.content { max-width: 600px; margin: 20px auto 0; padding: 0 20px; font-size: 1.125rem; }
+.content > :last-child { margin-bottom: 0; }
+.content p { margin: 0 0 20px; }
+.content ul { margin: 0 0 20px 20px; padding: 0 0 0 20px; }
+.content li { margin: 0 0 5px; }
+.content hr { margin: 20px 0; border: 0; border-top: 1px solid #999; }
+.content h5 {
+  margin: 10px 0 5px;
+  color: var(--heading);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Footer */
+.site-footer { margin-top: 60px; border-top: 1px solid #eee; }
+.site-footer-inner {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: .875rem;
+  text-align: center;
+}
+.site-footer-inner > :first-child { margin-bottom: 15px; }
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--accent); }
+
+@media (min-width: 720px) {
+  .logo { width: 300px; }
+  .content { max-width: 800px; }
+  .site-footer-inner { max-width: 760px; }
+}
+
+@media (min-width: 960px) {
+  .mobile-menu { display: none; }
+  .main-menu {
+    display: block;
+    padding: 5px 0;
+    background-color: var(--menu-background);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+  }
+  .site-footer-inner > :first-child { margin-bottom: 0; }
+}

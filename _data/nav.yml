@@ -1,0 +1,13 @@
+# The site menu. Internal pages use `path`; everything else uses `url`.
+- title: PsyNeuLink.org
+  path: /
+- title: Overview and Documentation
+  url: https://princetonuniversity.github.io/PsyNeuLink/
+- title: Tutorial
+  path: /tutorial/
+- title: PyPi Download
+  url: https://pypi.python.org/pypi/PsyNeuLink
+- title: GitHub Repository
+  url: https://github.com/PrincetonUniversity/PsyNeuLink
+- title: PsyNeuLinkView
+  path: /psyneulink-view-2/

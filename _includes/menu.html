@@ -1,0 +1,9 @@
+<ul>
+  {%- for item in site.data.nav %}
+  {%- if item.path %}
+  <li{% if page.url == item.path %} class="current"{% endif %}><a href="{{ item.path | relative_url }}"{% if page.url == item.path %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+  {%- else %}
+  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+  {%- endif %}
+  {%- endfor %}
+</ul>

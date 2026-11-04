@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
+  <link rel="icon" href="{{ '/assets/images/favicon-32.png' | relative_url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/assets/images/favicon-192.png' | relative_url }}" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Poppins:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <details class="mobile-menu">
+    <summary aria-label="Menu"><span class="menu-icon"></span></summary>
+    <nav aria-label="Mobile menu">{% include menu.html %}</nav>
+  </details>
+
+  <header class="site-header">
+    <a class="logo" href="{{ '/' | relative_url }}" rel="home"><img src="{{ '/assets/images/logo.png' | relative_url }}" width="400" height="329" alt="PsyNeuLink"></a>
+    <nav class="main-menu" aria-label="Main menu">{% include menu.html %}</nav>
+  </header>
+
+  <main id="content" class="content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</div>
+      <div><a href="{{ site.source_url }}">Source on GitHub</a></div>
+    </div>
+  </footer>
+</body>
+</html>
