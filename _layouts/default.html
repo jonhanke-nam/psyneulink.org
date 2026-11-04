@@ -24,7 +24,7 @@
     <nav class="main-menu" aria-label="Main menu">{% include menu.html %}</nav>
   </header>
 
-  <main id="content" class="content">
+  <main id="content" class="content{% if page.title %} titled{% endif %}">
     {{ content }}
   </main>
 
