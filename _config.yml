@@ -1,0 +1,11 @@
+title: PsyNeuLink
+source_url: https://github.com/jonhanke-nam/psyneulink.org
+
+# Set url to https://psyneulink.org when the domain moves over (see README).
+# If previewing on github.io first, also set baseurl to /psyneulink.org.
+url: https://psyneulink.org
+baseurl: ""
+
+permalink: pretty
+exclude:
+  - README.md
