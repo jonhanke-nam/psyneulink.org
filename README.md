@@ -8,7 +8,7 @@ Source for the [PsyNeuLink](https://github.com/PrincetonUniversity/PsyNeuLink) p
 
 | To change | Edit |
 | --- | --- |
-| Page text | `index.md`, `tutorial.md`, `psyneulink-view-2.md` |
+| Page text | `index.md`, `tutorial.md`, `psyneuview.md` |
 | The menu | `_data/nav.yml` |
 | Colors and spacing | `assets/css/site.css` |
 | Header and footer | `_layouts/default.html` |

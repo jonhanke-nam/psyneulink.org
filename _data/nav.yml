@@ -9,5 +9,5 @@
   url: https://pypi.python.org/pypi/PsyNeuLink
 - title: GitHub Repository
   url: https://github.com/PrincetonUniversity/PsyNeuLink
-- title: PsyNeuLinkView
-  path: /psyneulink-view-2/
+- title: PsyNeuView
+  path: /psyneuview/

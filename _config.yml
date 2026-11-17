@@ -9,3 +9,6 @@ baseurl: /psyneulink.org
 permalink: pretty
 exclude:
   - README.md
+
+plugins:
+  - jekyll-redirect-from
